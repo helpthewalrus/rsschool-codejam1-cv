@@ -1,9 +1,13 @@
+html {
+  box-sizing: border-box;
+}
+
 body {
-  margin: auto;
+  font-family: 'Mukta', sans-serif;
+  line-height: 1.5;
   background: #F2F2F2;
   color: #323232;
-  line-height: 1.5;
-  font-family: 'Arial', sans-serif;
+  margin: auto;
   width: 1024px;
 }
 
@@ -11,8 +15,15 @@ img {
   max-width: 100%;
 }
 
+.contact-item p {
+  display: inline-block;
+  height: 1em;
+  overflow: visible;
+}
+
 a {
   color: #323232;
+  font-weight: bold;
   text-decoration: none;
 }
 
@@ -20,66 +31,77 @@ a:hover {
   text-decoration: underline;
 }
 
-.grid {
-  border: 0px;
-  width: 1024px;
+.container {
+  max-width: 1024px;
+  margin: 40px auto;
+  padding: 32px;
+  background: white;
+}
+
+section {
   display: grid;
-  
-  grid-gap: 5px;
-  grid-template-columns: 2fr 3fr;
+  grid-template-columns: 1fr 4fr;
+  grid-gap: 20px;
+  padding: 24px 0;
+  border-bottom: 1px solid lightgray;
 }
 
-.box {
-  background-color: #F2F2F2;
-  border-radius: 5px;
-  border: 0px;
-  
+.section-title {
+  font-weight: bold;
+  font-size: 18px;
 }
 
-.header {
-  grid-area: 1 / 1 / span 2 / span 1;
-  text-align:center;
-  padding: 5px;
+img {
+  width: 130px;
 }
 
+.name {
+  font-size: 48px;
+  line-height: 1;
+}
 
 .contacts {
-  grid-area: 3 / 1 / span 1 / span 1;
-  padding: 5px;
+  display: flex;
+  margin: 10px 0 20px 0;
 }
 
-.summary {
-  grid-area: 4 / 1 / span 2 / span 1;
-  padding: 5px;
+.contact-item {
+  display: flex;
+  align-items: center;
+  flex: 2;
 }
 
-.experience {
-  grid-area: 1 / 2 / span 1 / span 1;
-  padding: 5px;
+.job {
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid lightgray;
 }
 
-.education {
-  grid-area: 2 / 2 / span 1 / span 1;
-  padding: 5px;
+.job:last-child {
+  border-bottom: none;
 }
 
-.skills {
-  grid-area: 3 / 2 / span 1 / span 1;
-  padding: 5px;
+.job-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 18px;
 }
 
-.code {
-  grid-area: 4 / 2 / span 1 / span 1;
-  
-  padding: 5px;
+.job-title ul {
+  font-size: 18px;
+  list-style-type: none;
 }
 
-.english {
-  grid-area: 5 / 2 / span 1 / span 1;
-  
-  padding: 5px;
+.job-company {
+  font-weight: bold;
+  line-height: 1.2;
 }
 
-.header h1, img {
-  margin: auto;
+
+.job-position ul {
+  font-size: 18px;
+  list-style-type: none;
 }
+
+
